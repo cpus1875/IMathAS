@@ -23,7 +23,7 @@ RUN apt-get purge -y javascript-common
 WORKDIR /var/www/html
 
 # 克隆 IMathAS 源代码
-RUN git clone https://github.com/dlippman/imathas.git .
+RUN git clone https://github.com/drlippman/IMathAS.git .
 
 # 暴露端口
 EXPOSE 80
