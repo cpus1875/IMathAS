@@ -20,16 +20,6 @@ WORKDIR /var/www/html
 # 克隆 IMathAS 源代码
 RUN git clone https://github.com/dlippman/imathas.git .
 
-# 复制默认配置文件
-COPY config.php /var/www/html/config.php
-
-# 设置目录权限
-RUN chmod -R 777 /var/www/html/assessment/libsassessment/qimages \
-    /var/www/html/admin/import \
-    /var/www/html/course/files \
-    /var/www/html/filter/graph/imgs \
-    /var/www/html/filestore
-
 # 暴露端口
 EXPOSE 80
 
